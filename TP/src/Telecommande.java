@@ -1,25 +1,35 @@
+import java.util.ArrayList;
 import java.util.List;
 
 public class Telecommande {
 
-    private List<Lampe> lampes;
+    private List<Appareil> Appareils ;;
 
     public Telecommande(){
-        throw new Error("code non écrit");
+        this.Appareils = new ArrayList<>();
     }
-    public void ajouterLampe(Lampe lampe){
-        throw new Error("code non écrit");
-
+    public void ajouterLampe(Appareil appa){
+        this.Appareils.add(appa);
     }
-    public void desactiverLampe(int IndiceLampe){
-        throw new Error("code non écrit");
+    public void desactiverLampe(int Indiceappa){
+        this.Appareils.get(Indiceappa).eteindre();
     }
-    public void activerLampe(int IndiceLampe){
-        throw new Error("code non écrot");
+    public void activerLampe(int Indiceappa){
+        this.Appareils.get(Indiceappa).allumer();
     }
-    public void ajouterTout(){
-        throw new Error("code non écrit");
+    public void activerToutLampe(){
+        for(Appareil a : Appareils){
+            a.allumer();
+        };
     }
-    
 
 }
+
+
+
+
+
+
+
+
+
